@@ -1,30 +1,19 @@
-# Career Path Advisor (Vanilla JS)
+Career Path Advisor 🎯
 
-Career Path Advisor este o aplicație web interactivă creată în HTML, CSS și JavaScript, care ajută utilizatorii să descopere ce rol în IT li se potrivește cel mai bine pe baza unui chestionar cu 10 întrebări.
-
-## Funcționalități
-- 10 întrebări evaluate pe o scală 1–5
-- Calcul automat al rolului IT recomandat
-- Afișare tehnologii recomandate pentru fiecare rol
-- UI modern Dark Mode, responsive
-
-## Roluri sugerate
-- Front-End Developer
-- Back-End Developer
-- QA Tester / Automation
-- Data Analyst
-- DevOps Engineer
-- UX/UI Designer
-- Mobile Developer
-- Game Developer
-- Cybersecurity Specialist
-- AI / Machine Learning Engineer
-
-## Tehnologii utilizate
-- HTML5
-- CSS3 (Dark Mode)
-- JavaScript Vanilla
-- Bootstrap 5
+Aplicație web interactivă care te ajută să îți evaluezi interesele și să descoperi ce carieră în IT ți se potrivește cel mai bine.  
+Utilizatorul răspunde prin ajustarea unor slider‑e, iar aplicația calculează scorurile și recomandă un rol împreună cu tehnologiile relevante.
 
 
+🚀 Funcționalități
+- 10 slider‑e pentru evaluarea intereselor (design, logică, QA, date, DevOps, UX, mobile, securitate, game dev, AI).
+- Calcul automat al scorurilor și afișarea rolului recomandat.
+- Listă de tehnologii asociate fiecărui rol.
+- Design elegant, cu temă violet premium și animații CSS.
+- Responsive, construit cu Bootstrap 5.
 
+
+🛠️ Tehnologii folosite
+- HTML5 – structură pagină
+- CSS3 – stilizare premium (gradient, animații, thumb personalizat)
+- JavaScript  – logica slider‑elor și calculul rezultatului
+- Bootstrap 5 – layout responsive
