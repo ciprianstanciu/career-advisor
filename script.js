@@ -1,20 +1,20 @@
-const sliders = document.querySelectorAll('.form-range');
+
+const sliders = document.querySelectorAll('.custom-range');
+
 
 sliders.forEach(slider => {
-  slider.value = 0;
   const span = document.getElementById(slider.name + '-value');
-  span.innerText = 0;
+  let displayedValue = parseInt(slider.value);
+  span.innerText = displayedValue;
 
-  let displayedValue = 0;
   let animFrame = null;
 
   const updateDisplay = (targetValue) => {
-    if (animFrame) cancelAnimationFrame(animFrame); // oprește animația curentă
+    if (animFrame) cancelAnimationFrame(animFrame);
 
     const animate = () => {
       displayedValue += (targetValue - displayedValue) * 0.2;
 
-      // dacă diferența este mică, fixăm valoarea exact
       if (Math.abs(displayedValue - targetValue) < 0.5) {
         displayedValue = targetValue;
       }
@@ -32,14 +32,12 @@ sliders.forEach(slider => {
   };
 
   slider.addEventListener('input', () => {
-    const targetValue = parseInt(slider.value); // target întreg
+    const targetValue = parseInt(slider.value);
     updateDisplay(targetValue);
   });
 });
 
 
-
-// Calcul rezultat
 function calculateResult() {
   const values = {};
   sliders.forEach(slider => values[slider.name] = parseInt(slider.value));
