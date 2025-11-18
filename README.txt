@@ -26,12 +26,5 @@ Career Path Advisor este o aplicație web interactivă creată în HTML, CSS și
 - JavaScript Vanilla
 - Bootstrap 5
 
-## Rulare locală
-Deschide `index.html` în browser.
 
-## Deploy GitHub Pages
-1. Creează un repository public pe GitHub (ex: `career-path-advisor`)
-2. Uploadă toate fișierele (`index.html`, `style.css`, `script.js`)
-3. În repo → Settings → Pages → Select branch: `main`, root folder `/`
-4. Salvează → aplicația va fi accesibilă la:  
-   `https://username.github.io/career-path-advisor/`
+
