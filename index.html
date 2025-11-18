@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Career Path Advisor</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container mt-5 p-4 rounded" id="quiz-container">
+  <h2 class="text-center mb-3">Career Path Advisor</h2>
+  <p class="text-center mb-4">Evaluează-ți interesele pentru a afla ce carieră în IT ți se potrivește cel mai bine.</p>
+
+  <form id="quizForm">
+    <!-- Slider 1 -->
+    <div class="mb-4" data-question="visual">
+      <label class="form-label" title="Interes pentru crearea de interfețe și design vizual">
+        Lucru cu interfețe vizuale & design
+      </label>
+      <input type="range" min="0" max="5" class="form-range" name="visual" value="0">
+      <span class="range-value" id="visual-value">0</span>
+    </div>
+
+    <!-- Slider 2 -->
+    <div class="mb-4" data-question="logic">
+      <label class="form-label" title="Interes pentru programare complexă și algoritmi">
+        Logică, algoritmi, programare complexă
+      </label>
+      <input type="range" min="0" max="5" class="form-range" name="logic" value="0">
+      <span class="range-value" id="logic-value">0</span>
+    </div>
+
+    <!-- Slider 3 -->
+    <div class="mb-4" data-question="qa">
+      <label class="form-label" title="Interes pentru testare și optimizare">
+        Testare, debugging, optimizare procese
+      </label>
+      <input type="range" min="0" max="5" class="form-range" name="qa" value="0">
+      <span class="range-value" id="qa-value">0</span>
+    </div>
+
+    <!-- Slider 4 -->
+    <div class="mb-4" data-question="data">
+      <label class="form-label" title="Interes pentru analiza datelor și rapoarte">
+        Analiză date, tabele, rapoarte
+      </label>
+      <input type="range" min="0" max="5" class="form-range" name="data" value="0">
+      <span class="range-value" id="data-value">0</span>
+    </div>
+
+    <!-- Slider 5 -->
+    <div class="mb-4" data-question="devops">
+      <label class="form-label" title="Interes pentru servere, cloud și automatizare">
+        Servere, cloud, automatizare
+      </label>
+      <input type="range" min="0" max="5" class="form-range" name="devops" value="0">
+      <span class="range-value" id="devops-value">0</span>
+    </div>
+
+    <!-- Slider 6 -->
+    <div class="mb-4" data-question="ux">
+      <label class="form-label" title="Interes pentru UX și interacțiunea cu utilizatorii">
+        Comunicarea cu utilizatorii, UX research
+      </label>
+      <input type="range" min="0" max="5" class="form-range" name="ux" value="0">
+      <span class="range-value" id="ux-value">0</span>
+    </div>
+
+    <!-- Slider 7 -->
+    <div class="mb-4" data-question="mobile">
+      <label class="form-label" title="Interes pentru aplicații mobile">
+        Dezvoltare aplicații mobile
+      </label>
+      <input type="range" min="0" max="5" class="form-range" name="mobile" value="0">
+      <span class="range-value" id="mobile-value">0</span>
+    </div>
+
+    <!-- Slider 8 -->
+    <div class="mb-4" data-question="security">
+      <label class="form-label" title="Interes pentru securitatea IT și protecția datelor">
+        Securitate, protecția datelor
+      </label>
+      <input type="range" min="0" max="5" class="form-range" name="security" value="0">
+      <span class="range-value" id="security-value">0</span>
+    </div>
+
+    <!-- Slider 9 -->
+    <div class="mb-4" data-question="game">
+      <label class="form-label" title="Interes pentru dezvoltare jocuri și gaming engines">
+        Game development, gaming engines
+      </label>
+      <input type="range" min="0" max="5" class="form-range" name="game" value="0">
+      <span class="range-value" id="game-value">0</span>
+    </div>
+
+    <!-- Slider 10 -->
+    <div class="mb-4" data-question="ai">
+      <label class="form-label" title="Interes pentru AI și machine learning">
+        AI, machine learning, modele matematice
+      </label>
+      <input type="range" min="0" max="5" class="form-range" name="ai" value="0">
+      <span class="range-value" id="ai-value">0</span>
+    </div>
+
+    <button type="button" class="btn btn-primary w-100 mt-3" onclick="calculateResult()">
+      Află rolul recomandat
+    </button>
+  </form>
+
+  <div id="result" class="alert alert-info text-center mt-4 fs-5" style="display:none;"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

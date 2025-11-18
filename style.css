@@ -1,0 +1,96 @@
+body {
+  background-color: #0d1117;
+  color: #f0f6fc;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+#quiz-container {
+  background-color: rgba(22,27,34,0.95);
+  box-shadow: 0 0 20px rgba(0,0,0,0.6);
+  padding: 30px;
+  border-radius: 15px;
+  max-width: 700px;
+  margin: 20px auto;
+  transition: all 0.3s ease;
+}
+
+label {
+  font-weight: 600;
+  color: #c9d1d9;
+}
+
+.range-value {
+  font-weight: bold;
+  margin-left: 10px;
+  transition: all 0.2s ease;
+}
+
+/* Slider simplu, fundal gri */
+.form-range {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 12px;
+  border-radius: 6px;
+  background-color: #444;
+}
+
+.form-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 24px;
+  height: 24px;
+  background: #58a6ff;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 8px rgba(0,0,0,0.5);
+  transition: transform 0.2s ease;
+}
+
+.form-range::-moz-range-thumb {
+  width: 24px;
+  height: 24px;
+  background: #58a6ff;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 8px rgba(0,0,0,0.5);
+  transition: transform 0.2s ease;
+}
+
+/* Button */
+.btn-primary {
+  background-color: #238636;
+  border-color: #238636;
+  color: #ffffff;
+  transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: #2ea043;
+  border-color: #2ea043;
+}
+
+/* Rezultat */
+#result {
+  background-color: #1f6feb;
+  color: #fff;
+  border: none;
+  padding: 15px;
+  border-radius: 10px;
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  #quiz-container {
+    padding: 20px;
+    margin: 10px;
+  }
+}
