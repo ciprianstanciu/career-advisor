@@ -1,59 +1,38 @@
+const selectedValues = {};
 
-const sliders = document.querySelectorAll('.custom-range');
+document.querySelectorAll('.rating-group').forEach(group => {
+  const name = group.dataset.name;
+  const buttons = group.querySelectorAll('.rating-box');
+
+  buttons.forEach(button => {
+    button.addEventListener('click', () => {
+
+      buttons.forEach(b => b.classList.remove('selected'));
+      button.classList.add('selected');
 
 
-sliders.forEach(slider => {
-  const span = document.getElementById(slider.name + '-value');
-  let displayedValue = parseInt(slider.value);
-  span.innerText = displayedValue;
-
-  let animFrame = null;
-
-  const updateDisplay = (targetValue) => {
-    if (animFrame) cancelAnimationFrame(animFrame);
-
-    const animate = () => {
-      displayedValue += (targetValue - displayedValue) * 0.2;
-
-      if (Math.abs(displayedValue - targetValue) < 0.5) {
-        displayedValue = targetValue;
-      }
-
-      span.innerText = Math.round(displayedValue);
-
-      if (displayedValue !== targetValue) {
-        animFrame = requestAnimationFrame(animate);
-      } else {
-        animFrame = null;
-      }
-    };
-
-    animate();
-  };
-
-  slider.addEventListener('input', () => {
-    const targetValue = parseInt(slider.value);
-    updateDisplay(targetValue);
+      selectedValues[name] = parseInt(button.dataset.value);
+    });
   });
 });
 
 
 function calculateResult() {
-  const values = {};
-  sliders.forEach(slider => values[slider.name] = parseInt(slider.value));
+  const values = selectedValues;
 
   const scores = {
-    "Front-End Developer": values.visual*2 + values.ux*2 + values.logic,
-    "Back-End Developer": values.logic*2 + values.security + values.devops,
-    "QA Tester / Automation": values.qa*2 + values.logic,
-    "Data Analyst": values.data*2 + values.ai,
-    "DevOps Engineer": values.devops*2 + values.security,
-    "UX/UI Designer": values.visual*2 + values.ux*2,
-    "Mobile Developer": values.mobile*2 + values.visual,
-    "Game Developer": values.game*2 + values.logic,
-    "Cybersecurity Specialist": values.security*2 + values.logic,
-    "AI / Machine Learning Engineer": values.ai*2 + values.data + values.logic
+    "Front-End Developer": (values.visual || 0)*2 + (values.ux || 0)*2 + (values.logic || 0),
+    "Back-End Developer": (values.logic || 0)*2 + (values.security || 0) + (values.devops || 0),
+    "QA Tester / Automation": (values.qa || 0)*2 + (values.logic || 0),
+    "Data Analyst": (values.data || 0)*2 + (values.ai || 0),
+    "DevOps Engineer": (values.devops || 0)*2 + (values.security || 0),
+    "UX/UI Designer": (values.visual || 0)*2 + (values.ux || 0)*2,
+    "Mobile Developer": (values.mobile || 0)*2 + (values.visual || 0),
+    "Game Developer": (values.game || 0)*2 + (values.logic || 0),
+    "Cybersecurity Specialist": (values.security || 0)*2 + (values.logic || 0),
+    "AI / Machine Learning Engineer": (values.ai || 0)*2 + (values.data || 0) + (values.logic || 0)
   };
+
 
   let result = Object.keys(scores).reduce((a,b) => scores[a] > scores[b] ? a : b);
 
