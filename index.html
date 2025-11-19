@@ -4,10 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Career Path Advisor</title>
-
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="images/favicon.png">
 </head>
 <body>
 <div class="container mt-5 p-4 rounded" id="quiz-container">
@@ -16,64 +15,123 @@
 
   <form id="quizForm">
     <div class="mb-4" data-question="visual">
-      <label class="form-label">Lucru cu interfețe vizuale & design</label>
-      <input type="range" min="0" max="5" class="custom-range" name="visual" value="0">
-      <span class="range-value" id="visual-value">0</span>
-    </div>
+  <label class="form-label">Lucru cu interfețe vizuale & design</label>
+  <div class="rating-group" data-name="visual">
+    <button type="button" class="rating-box" data-value="1">1</button>
+    <button type="button" class="rating-box" data-value="2">2</button>
+    <button type="button" class="rating-box" data-value="3">3</button>
+    <button type="button" class="rating-box" data-value="4">4</button>
+    <button type="button" class="rating-box" data-value="5">5</button>
+  </div>
+</div>
+
 
     <div class="mb-4" data-question="logic">
-      <label class="form-label">Logică, algoritmi, programare complexă</label>
-      <input type="range" min="0" max="5" class="custom-range" name="logic" value="0">
-      <span class="range-value" id="logic-value">0</span>
-    </div>
+  <label class="form-label">Logică, algoritmi, programare complexă</label>
+  <div class="rating-group" data-name="visual">
+    <button type="button" class="rating-box" data-value="1">1</button>
+    <button type="button" class="rating-box" data-value="2">2</button>
+    <button type="button" class="rating-box" data-value="3">3</button>
+    <button type="button" class="rating-box" data-value="4">4</button>
+    <button type="button" class="rating-box" data-value="5">5</button>
+  </div>
+</div>
+
 
     <div class="mb-4" data-question="qa">
-      <label class="form-label">Testare, debugging, optimizare procese</label>
-      <input type="range" min="0" max="5" class="custom-range" name="qa" value="0">
-      <span class="range-value" id="qa-value">0</span>
-    </div>
+  <label class="form-label">Testare, debugging, optimizare procese</label>
+  <div class="rating-group" data-name="visual">
+    <button type="button" class="rating-box" data-value="1">1</button>
+    <button type="button" class="rating-box" data-value="2">2</button>
+    <button type="button" class="rating-box" data-value="3">3</button>
+    <button type="button" class="rating-box" data-value="4">4</button>
+    <button type="button" class="rating-box" data-value="5">5</button>
+  </div>
+</div>
+
 
     <div class="mb-4" data-question="data">
-      <label class="form-label">Analiză date, tabele, rapoarte</label>
-      <input type="range" min="0" max="5" class="custom-range" name="data" value="0">
-      <span class="range-value" id="data-value">0</span>
-    </div>
+  <label class="form-label">Analiză date, tabele, rapoarte</label>
+  <div class="rating-group" data-name="visual">
+    <button type="button" class="rating-box" data-value="1">1</button>
+    <button type="button" class="rating-box" data-value="2">2</button>
+    <button type="button" class="rating-box" data-value="3">3</button>
+    <button type="button" class="rating-box" data-value="4">4</button>
+    <button type="button" class="rating-box" data-value="5">5</button>
+  </div>
+</div>
+
 
     <div class="mb-4" data-question="devops">
-      <label class="form-label">Servere, cloud, automatizare</label>
-      <input type="range" min="0" max="5" class="custom-range" name="devops" value="0">
-      <span class="range-value" id="devops-value">0</span>
-    </div>
+  <label class="form-label">Servere, cloud, automatizare</label>
+  <div class="rating-group" data-name="visual">
+    <button type="button" class="rating-box" data-value="1">1</button>
+    <button type="button" class="rating-box" data-value="2">2</button>
+    <button type="button" class="rating-box" data-value="3">3</button>
+    <button type="button" class="rating-box" data-value="4">4</button>
+    <button type="button" class="rating-box" data-value="5">5</button>
+  </div>
+</div>
 
-    <div class="mb-4" data-question="ux">
-      <label class="form-label">Comunicarea cu utilizatorii, UX research</label>
-      <input type="range" min="0" max="5" class="custom-range" name="ux" value="0">
-      <span class="range-value" id="ux-value">0</span>
-    </div>
 
-    <div class="mb-4" data-question="mobile">
-      <label class="form-label">Dezvoltare aplicații mobile</label>
-      <input type="range" min="0" max="5" class="custom-range" name="mobile" value="0">
-      <span class="range-value" id="mobile-value">0</span>
-    </div>
+    <div class="mb-4" data-question="visual">
+  <label class="form-label">Comunicarea cu utilizatorii, UX research</label>
+  <div class="rating-group" data-name="ux">
+    <button type="button" class="rating-box" data-value="1">1</button>
+    <button type="button" class="rating-box" data-value="2">2</button>
+    <button type="button" class="rating-box" data-value="3">3</button>
+    <button type="button" class="rating-box" data-value="4">4</button>
+    <button type="button" class="rating-box" data-value="5">5</button>
+  </div>
+</div>
 
-    <div class="mb-4" data-question="security">
-      <label class="form-label">Securitate, protecția datelor</label>
-      <input type="range" min="0" max="5" class="custom-range" name="security" value="0">
-      <span class="range-value" id="security-value">0</span>
-    </div>
 
-    <div class="mb-4" data-question="game">
-      <label class="form-label">Game development, gaming engines</label>
-      <input type="range" min="0" max="5" class="custom-range" name="game" value="0">
-      <span class="range-value" id="game-value">0</span>
-    </div>
+    <div class="mb-4" data-question="visual">
+  <label class="form-label">Dezvoltare aplicații mobile</label>
+  <div class="rating-group" data-name="mobile">
+    <button type="button" class="rating-box" data-value="1">1</button>
+    <button type="button" class="rating-box" data-value="2">2</button>
+    <button type="button" class="rating-box" data-value="3">3</button>
+    <button type="button" class="rating-box" data-value="4">4</button>
+    <button type="button" class="rating-box" data-value="5">5</button>
+  </div>
+</div>
 
-    <div class="mb-4" data-question="ai">
-      <label class="form-label">AI, machine learning, modele matematice</label>
-      <input type="range" min="0" max="5" class="custom-range" name="ai" value="0">
-      <span class="range-value" id="ai-value">0</span>
-    </div>
+
+    <div class="mb-4" data-question="visual">
+  <label class="form-label">Securitate, protecția datelor</label>
+  <div class="rating-group" data-name="security">
+    <button type="button" class="rating-box" data-value="1">1</button>
+    <button type="button" class="rating-box" data-value="2">2</button>
+    <button type="button" class="rating-box" data-value="3">3</button>
+    <button type="button" class="rating-box" data-value="4">4</button>
+    <button type="button" class="rating-box" data-value="5">5</button>
+  </div>
+</div>
+
+
+    <div class="mb-4" data-question="visual">
+  <label class="form-label">Game development, gaming engines</label>
+  <div class="rating-group" data-name="game">
+    <button type="button" class="rating-box" data-value="1">1</button>
+    <button type="button" class="rating-box" data-value="2">2</button>
+    <button type="button" class="rating-box" data-value="3">3</button>
+    <button type="button" class="rating-box" data-value="4">4</button>
+    <button type="button" class="rating-box" data-value="5">5</button>
+  </div>
+</div>
+
+    <div class="mb-4" data-question="visual">
+  <label class="form-label">AI, machine learning, modele matematice</label>
+  <div class="rating-group" data-name="ai">
+    <button type="button" class="rating-box" data-value="1">1</button>
+    <button type="button" class="rating-box" data-value="2">2</button>
+    <button type="button" class="rating-box" data-value="3">3</button>
+    <button type="button" class="rating-box" data-value="4">4</button>
+    <button type="button" class="rating-box" data-value="5">5</button>
+  </div>
+</div>
+
 
     <button type="button" class="button w-100 mt-3" onclick="calculateResult()">
       Află rolul recomandat
@@ -84,5 +142,8 @@
 </div>
 
 <script src="script.js"></script>
+<footer class="text-center mt-5 mb-3 text-muted small">
+  &copy; 2025 Ciprian Stanciu | Career Path Advisor - All rights reserved.
+</footer>
 </body>
 </html>
